@@ -118,17 +118,19 @@ echo '<br><br>';
 //Créer un tableau pour les mois de l'année et affiché tous les mois de Janvier à Décembre
 //modifier et/ou remplacer les éléments ci-dessous
 echo "8.Les mois depuis le debut de l'annee : <br>";
-$mois = [];
-for ($i = 0; $i < 0; $i) {
-    echo '';
+$mois = ["Janvier", "Février", "Mars", "Avril", "Mai", "Juin", "Juillet", "Aout", "Septembre", "Octobre", "Decembre"];
+for ($i = 0; $i < count($mois); $i++) {
+    echo $mois[$i] . "<br>";
 }
 echo '<br><br>';
 
 //Afficher les mois de la fin de l'année jusqu'au début de l'année
 //modifier et/ou remplacer les éléments ci-dessous
 echo "9.Les mois depuis la fin de l'annee : <br>";
-for ($i = 0; $i < 0; $i) {
-    echo '';
+$num = count($mois);
+
+for($i = $num -1; $i >= 0; --$i) {
+    echo $mois[$i] . "<br>";
 }
 echo '<br><br>';
 
@@ -158,6 +160,17 @@ $college = array(
 
 echo '10.Les eleves du college : <br>';
 //ajoutez votre code ici
+foreach ($college["Sixieme"] as $key => $value) {
+    echo implode(" ", $value) . "<br>";
+}
+
+foreach ($college["Cinquieme"] as $key => $value) {
+    echo implode(" ", $value) . "<br>";
+}
+
+foreach ($college["Quatrieme"] as $key => $value) {
+    echo implode(" ", $value) . "<br>";
+}
 echo '<br><br>';
 
 //----------------------------------------
@@ -165,6 +178,47 @@ echo '<br><br>';
 //reprenez le tableau ci-dessus, ajoutez des éléves pour la classe de troisième et réaffichez tout
 echo '11.Les eleves du college (avec les nouveaux arrivants): <br>';
 //ajoutez votre code ici
+$colleges = array(
+    'Sixieme' => array(
+        array('Nom' => 'Payet', 'Prenom' => 'Mickael'),
+        array('Nom' => 'Hoareau', 'Prenom' => 'Christine'),
+        array('Nom' => 'Maillot', 'Prenom' => 'Laure'),
+    ),
+    'Cinquieme' => array(
+        array('Nom' => 'Bourdon', 'Prenom' => 'Didier'),
+        array('Nom' => 'Legitimus', 'Prenom' => 'Pascal'),
+        array('Nom' => 'Campan', 'Prenom' => 'Bernard'),
+        array('Nom' => 'Fois', 'Prenom' => 'Marina'),
+        array('Nom' => 'Floresti', 'Prenom' => 'Florence'),
+    ),
+    'Quatrieme' => array(
+        array('Nom' => 'Willis', 'Prenom' => 'Bruce'),
+        array('Nom' => 'Lawrence', 'Prenom' => 'Laurence'),
+        array('Nom' => 'Johannson', 'Prenom' => 'Scarlett'),
+        array('Nom' => 'Jackson', 'Prenom' => 'Samuel'),
+    ),
+    'Troisieme' => array(
+        array('Nom' => 'Jean', 'Prenom' => 'Bon'),
+        array('Nom' => 'Jean', 'Prenom' => 'Nemare'),
+        array('Nom' => 'Arthur', 'Prenom' => 'Lent'),
+        array('Nom' => 'Jack', 'Prenom' => 'Sparow'),
+    ),
+);
+foreach ($colleges["Sixieme"] as $key => $value) {
+    echo implode(" ", $value) . "<br>";
+}
+
+foreach ($colleges["Cinquieme"] as $key => $value) {
+    echo implode(" ", $value) . "<br>";
+}
+
+foreach ($colleges["Quatrieme"] as $key => $value) {
+    echo implode(" ", $value) . "<br>";
+}
+
+foreach ($colleges["Troisieme"] as $key => $value) {
+    echo implode(" ", $value) . "<br>";
+}
 echo '<br><br>';
 
 //----------------------------------------
